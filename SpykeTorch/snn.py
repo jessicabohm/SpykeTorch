@@ -71,7 +71,13 @@ class Convolution(nn.Module):
         Args:
             target (Tensor=): The target tensor.
         """
-        self.weight.copy_(target)	
+        self.weight.copy_(target)
+
+    def get_weight(self):
+        """Returns weights tensor.
+        """
+        return self.weight	
+	
 
     def forward(self, input):
         return fn.conv2d(input, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
