@@ -3,6 +3,7 @@
 
 # Jess
 /ETH_proc/*
+/ETH_proc_bin/*
 
 # User-specific files
 *.suo
